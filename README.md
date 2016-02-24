@@ -1,24 +1,25 @@
 
-JUEGO PARA PS2: RESOLVIENDO EL CUBO DE RUBIK.
-********************************************
+Juego para PS2: Resolviendo el cubo de rubik.
+============================================
 
  Trabajo final de la materia "Arquitectura del computador" LCC.
+ 
  Alumno: Marcos Pividori.
 
  Se realizó sobre el entorno ps2dev, usando diferentes librerias, y basándose en
  ejemplos y tests de los joysticks, video y audio.
 
- Para instrucciones del juego, ver "Guia de Juego".
-
 INTRODUCCIÓN:
-*************
+-------------
  Necesitamos un método que nos permita ejecutar software en la PS2 sin necesidad
  de grabarlo en un CD, ya que esto sería muy costoso.
+
  Por otro lado, no podemos probar nuestros programas en una computadora común,
  porque constan de una arquitectura totalmente diferente. Para resolver esto,
  haremos uso de dos herramientas clave: un compilador cruzado, que nos permite
  compilar en una PC común codigo para procesadores MIPS, y de un sistema
  cliente-servidor para ejecutar los programas en la consola.
+
  Como la PlayStation consta de dos microprocesadores MIPS distintos, serán
  necesarios dos compiladores cruzados: ee-gcc y iop-gcc (Se puede también usar
  solo uno, depende el uso que uno quiera hacer de los procesadores).
@@ -26,36 +27,36 @@ INTRODUCCIÓN:
  Una vez compilado el código (ejecutando: make all), para correrlo en la PS2
  presentamos dos opciones:
 
- - PS2Client + PS2Link:
-   *******************
+ - **PS2Client + PS2Link:**
+   
    Es un método muy útil y simple, conectando la consola con la pc a través de un
    cable de red, y haciendo uso de dos aplicaciones: Ps2Client en la PC y Ps2Link
    en la PS2.
 
-   PS2Link: es un "bootloader" que, utilizado junto con un controlador Ethernet
+   *Ps2Link:* es un "bootloader" que, utilizado junto con un controlador Ethernet
    y una pila TCP/IP, permite descargar y ejecutar software en la PS2. Este
    programa se ejecuta en la PS2 a través de un CD con el formato correspondiente
    (el CD está disponible para quien lo necesite).
 
-   Ps2Client: es un cliente que nos permite conectarnos con PS2Link y transmitir
+   *Ps2Client:* es un cliente que nos permite conectarnos con PS2Link y transmitir
    comandos. Se maneja desde la consola de la PC.
 
    (Ver instrucciones detalladas).
 
- - PCSX2:
-   *****
-   PCSX2 es un emulador para PlayStation2 de código abierto (http://pcsx2.net/). 
+ - **PCSX2:**
+   
+   *PCSX2* es un emulador para PlayStation2 de código abierto (http://pcsx2.net/). 
    Si no contamos con una PS2 en concreto, podemos ejecutar nuestros programas
    en el emulador sin problemas.
    (Ver instrucciones detalladas).
 
- Finalmente, una vez terminado el proyecto, es posible grabar el programa en un CD
- (con el formato correspondiente) y prescindir de estas aplicaciones para
- ejecutarlo en la PS2 real.
+Finalmente, una vez terminado el proyecto, es posible grabar el programa en un CD
+(con el formato correspondiente) y prescindir de estas aplicaciones para
+ejecutarlo en la PS2 real.
 
 
 EJECUTAR EL JUEGO UTILIZANDO PS2CLIENT Y PS2LINK:
-************************************************
+-------------------------------------------------
  Si deseamos ejecutar el juego en una PlayStation real:
    + Conectar la PS2 con la computadora a través de un cable de Red.
 
@@ -77,7 +78,7 @@ EJECUTAR EL JUEGO UTILIZANDO PS2CLIENT Y PS2LINK:
 
 
 EJECUTAR EL JUEGO UTILIZANDO PCSX2:
-**********************************
+----------------------------------
  Si deseamos ejecutar el juego en el emulador PCSX2:
    + Descargar e instalar el emulador PCSX2 (http://pcsx2.net/).
 
@@ -95,10 +96,10 @@ EJECUTAR EL JUEGO UTILIZANDO PCSX2:
 
 
 GUÍA DE JUEGO:
-*************
+-------------
 
- DEFINIR EL CUBO A RESOLVER:
- ---------------------------
+**DEFINIR EL CUBO A RESOLVER:**
+
  Al inicio, el programa nos da la opcion de ingresar nuestro cubo de rubik,
  es decir, los colores y la distribucion del cubo que tenemos.
  
@@ -114,8 +115,8 @@ GUÍA DE JUEGO:
    Una vez que terminamos de definir nuestro cubo, pulsamos START.
 
 
- JUGAR:
- ------
+**JUGAR:**
+ 
  Para mover el cubo, tenemos un "cursor" que nos muestra la cara seleccionada y
  podemos cambiarlo de cara con L1. Una vez decidida la cara, la rotamos con los
  botones CUADRADO en sentido horario y con TRIANGULO en sentido antihorario.
@@ -136,8 +137,8 @@ GUÍA DE JUEGO:
  un cubo aleatorio.
 
 
- MOVER LA CÁMARA:
- ----------------
+**MOVER LA CÁMARA:**
+ 
  Siempre podemos mover la camara desde donde se ve el cubo usando los controles
  analógicos, o las flechas.
 
