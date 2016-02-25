@@ -1,13 +1,17 @@
 
-Juego para PS2: Resolviendo el cubo de rubik.
-============================================
+Ps2Rubik:
+=========
+ 
+ Juego para PS2, resolviendo el cubo de rubik.
 
  Trabajo final de la materia "Arquitectura del computador" LCC.
  
  Alumno: Marcos Pividori.
 
+![](/sound/rubik.png?raw=true)
+
  Se realizó sobre el entorno ps2dev, usando diferentes librerias, y basándose en
- ejemplos y tests de los joysticks, video y audio.
+ ejemplos y tests de joysticks, video y audio.
 
 INTRODUCCIÓN:
 -------------
