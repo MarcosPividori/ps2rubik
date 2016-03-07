@@ -199,23 +199,24 @@ void init_vertices()
 
 void calcular_vertices_rotados(VECTOR *output, int count, VECTOR *vertices, MATRIX local_screen) {
     asm __volatile__ (
-        "lqc2        vf1, 0x00(%3)    \n"
-        "lqc2        vf2, 0x10(%3)    \n"
-        "lqc2        vf3, 0x20(%3)    \n"
-        "lqc2        vf4, 0x30(%3)    \n"
-        "1:                           \n"
-        "lqc2        vf6, 0x00(%2)    \n"
-        "vmulaw      ACC, vf4, vf0    \n"
-        "vmaddax     ACC, vf1, vf6    \n"
-        "vmadday     ACC, vf2, vf6    \n"
-        "vmaddaz     ACC, vf3, vf6    \n"
-        "vmadd.xyz   vf5, vf0, vf0    \n"
-        "vaddz.w     vf5, vf0, vf0    \n"
-        "sqc2        vf5, 0x00(%0)    \n"
-        "addi        %0, 0x10         \n"
-        "addi        %2, 0x10         \n"
-        "addi        %1, -1           \n"
-        "bne         $0, %1, 1b       \n"
+        "lqc2        vf1, 0x00(%3)    \n" // Carga la columna 1 de local_screen en vf1.
+        "lqc2        vf2, 0x10(%3)    \n" // Carga la columna 2 de local_screen en vf2.
+        "lqc2        vf3, 0x20(%3)    \n" // Carga la columna 3 de local_screen en vf3.
+        "lqc2        vf4, 0x30(%3)    \n" // Carga la columna 4 de local_screen en vf4.
+        "1:                           \n" // Inicia el loop que recorrera el arreglo de vertices.
+        "lqc2        vf6, 0x00(%2)    \n" // Carga vertice en vf6.
+        "vmulaw      ACC, vf4, vf0    \n" // Guarda la cuarta columna intacta en acc.
+        "vmaddax     ACC, vf1, vf6    \n" // Multiplica la primer columna con la componente x del vector y lo suma a acc.
+        "vmadday     ACC, vf2, vf6    \n" // Multiplica la segunda columna con la componente y del vector y lo suma a acc.
+        "vmaddaz     ACC, vf3, vf6    \n" // Multiplica la tercera columna con la componente z del vector y lo suma a acc.
+                                          // En este punto se encuentra el resultado de la multiplicacion en acc.
+        "vmadd.xyz   vf5, vf0, vf0    \n" // Copia el valor las primeras 3 componentes (x,y,z) de ACC en vf5.
+        "vaddz.w     vf5, vf0, vf0    \n" // Setea el valor 0 en la cuarta componente (w) de vf5.
+        "sqc2        vf5, 0x00(%0)    \n" // Mueve vf5 a output.
+        "addi        %0, 0x10         \n" // Avanza uno en output .
+        "addi        %2, 0x10         \n" // Avanza uno en vertices.
+        "addi        %1, -1           \n" // Resta uno al contador.
+        "bne         $0, %1, 1b       \n" // Si no terminó, salta al inicio del loop.
         : : "r" (output), "r" (count), "r" (vertices), "r" (local_screen) : "$10"
     );
 }
