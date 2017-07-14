@@ -36,4 +36,4 @@ void init_small_engine();
 
 void stop_small_engine();
 
-#endif // __JOYSTICKS__
+#endif                          // __JOYSTICKS__

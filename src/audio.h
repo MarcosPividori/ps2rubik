@@ -7,4 +7,4 @@ void cargar_cancion();
 
 void reiniciar_cancion();
 
-#endif // __DEFINE__
+#endif                          // __DEFINE__

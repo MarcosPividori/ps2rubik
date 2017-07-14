@@ -4,7 +4,6 @@
 
 #include "cubo.h"
 
-int desarmar_cubo(cubo *cub);
+int desarmar_cubo(cubo * cub);
 
-#endif // __GENERADOR__
-
+#endif                          // __GENERADOR__

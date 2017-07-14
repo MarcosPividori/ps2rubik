@@ -4,9 +4,9 @@ OBJDIR = obj
 SRCDIR = src
 
 CC = ee-gcc
-CFLAGS = -D_EE -O2 -G0 -Wall 
+CFLAGS = -D_EE -O2 -G0 -Wall
 INCLUDES = -I$(PS2SDK)/ee/include -I$(PS2SDK)/common/include -I. -I$(PS2SDK)/samples/rpc/pad
-LFLAGS = -mno-crt0 -T$(PS2SDK)/ee/startup/linkfile -L$(PS2SDK)/ee/lib -laudsrv -ldraw -lpad -lgraph -lmath3d -lmf -lpacket -ldma -lc -lc -lkernel 
+LFLAGS = -mno-crt0 -T$(PS2SDK)/ee/startup/linkfile -L$(PS2SDK)/ee/lib -laudsrv -ldraw -lpad -lgraph -lmath3d -lmf -lpacket -ldma -lc -lc -lkernel
 
 SOURCESC = cubo.c cola.c visual.c audio.c joysticks.c generador.c rubik_solver.c beginner_solver.c run_rubik.c
 

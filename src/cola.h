@@ -3,12 +3,12 @@
 
 #include "cubo.h"
 
-void add_cola(cubo *a);
+void add_cola(cubo * a);
 
-cubo* quitar_cola();
+cubo *quitar_cola();
 
 void vaciar_cola();
 
 int cola_vacia();
 
-#endif // __COLA__
+#endif                          // __COLA__

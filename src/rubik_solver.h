@@ -4,7 +4,6 @@
 
 #include "cubo.h"
 
-cubo *rubik_solver(cubo *cubo_in,int paso,int caso);
+cubo *rubik_solver(cubo * cubo_in, int paso, int caso);
 
-#endif //__RUBIK_SOLVER__
-
+#endif                          //__RUBIK_SOLVER__

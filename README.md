@@ -1,11 +1,11 @@
 
 Ps2Rubik:
 =========
- 
+
  Juego para PS2, resolviendo el cubo de rubik.
 
  Trabajo final de la materia "Arquitectura del computador" LCC.
- 
+
  Alumno: Marcos Pividori.
 
 ![](/sound/rubik.png?raw=true)
@@ -27,12 +27,12 @@ INTRODUCCIÓN:
  Como la PlayStation consta de dos microprocesadores MIPS distintos, serán
  necesarios dos compiladores cruzados: ee-gcc y iop-gcc (Se puede también usar
  solo uno, depende el uso que uno quiera hacer de los procesadores).
- 
+
  Una vez compilado el código (ejecutando: make all), para correrlo en la PS2
  presentamos dos opciones:
 
  - **PS2Client + PS2Link:**
-   
+
    Es un método muy útil y simple, conectando la consola con la pc a través de un
    cable de red, y haciendo uso de dos aplicaciones: Ps2Client en la PC y Ps2Link
    en la PS2.
@@ -48,8 +48,8 @@ INTRODUCCIÓN:
    (Ver instrucciones detalladas).
 
  - **PCSX2:**
-   
-   *PCSX2* es un emulador para PlayStation2 de código abierto (http://pcsx2.net/). 
+
+   *PCSX2* es un emulador para PlayStation2 de código abierto (http://pcsx2.net/).
    Si no contamos con una PS2 en concreto, podemos ejecutar nuestros programas
    en el emulador sin problemas.
    (Ver instrucciones detalladas).
@@ -106,7 +106,7 @@ GUÍA DE JUEGO:
 
  Al inicio, el programa nos da la opcion de ingresar nuestro cubo de rubik,
  es decir, los colores y la distribucion del cubo que tenemos.
- 
+
  - Si solamente queremos jugar con un cubo aleatorio, al inicio pulsamos START
    sin cambiar nada y después con el boton O podemos pedir combinaciones
    aleatorias del cubo para resolver.
@@ -120,7 +120,7 @@ GUÍA DE JUEGO:
 
 
 **JUGAR:**
- 
+
  Para mover el cubo, tenemos un "cursor" que nos muestra la cara seleccionada y
  podemos cambiarlo de cara con L1. Una vez decidida la cara, la rotamos con los
  botones CUADRADO en sentido horario y con TRIANGULO en sentido antihorario.
@@ -142,7 +142,7 @@ GUÍA DE JUEGO:
 
 
 **MOVER LA CÁMARA:**
- 
+
  Siempre podemos mover la camara desde donde se ve el cubo usando los controles
  analógicos, o las flechas.
 
